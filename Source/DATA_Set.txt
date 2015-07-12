@@ -1,0 +1,31 @@
+#include <igtlMessageBase.h> ""
+
+#include <igtlBindMessage.h> "BIND"
+
+#include <igtlColorTableMessage.h> "COLORTABLE"
+
+#include <igtlImageMessage.h> "IMAGE"
+#include <igtlImageMetaMessage.h> "IMGMETA"
+#include <igtlLabelMetaMessage.h> "LBMETA"
+
+
+#include <igtlNDArrayMessage.h> "NDARRAY"
+
+#include <igtlPointMessage.h> "POINT"
+#include <igtlPositionMessage.h> "POSITION"
+
+#include <igtlQuaternionTrackingDataMessage.h> "QTDATA"
+
+#include <igtlSensorMessage.h>
+#include <igtlStatusMessage.h> "STATUS"
+#include <igtlStringMessage.h> "STRING" 
+
+#include <igtlTrackingDataMessage.h> "TDATA"
+#include <igtlTransformMessage.h> "TRANSFORM"
+#include <igtlTrajectoryMessage.h>  "TRAJ"
+
+#include "igtlMUSMessage.h"
+#include "igtlMEIMessage.h"
+#include "igtlMGenMessage.h" "GEN"
+#include "igtlMArgMessage.h" "ARGUMENTS"
+#include "igtlMFileMessage.h" "FILE"

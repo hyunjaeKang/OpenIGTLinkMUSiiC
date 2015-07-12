@@ -1,0 +1,58 @@
+#-----------------------------------------------------------------------------
+#
+# OpenIGTLinkMUSiiCConfig.cmake - OpenIGTLinkMUSiiC CMake configuration file for external projects.
+#
+# This file is configured by OpenIGTLinkMUSiiC and used by the UseOpenIGTLinkMUSiiC.cmake module
+# to load OpenIGTLinkMUSiiC's settings for an external project.
+@OpenIGTLinkMUSiiC_CONFIG_CODE@
+
+# The OpenIGTLinkMUSiiC include file directories.
+SET(OpenIGTLinkMUSiiC_INCLUDE_DIRS "@OpenIGTLinkMUSiiC_INCLUDE_DIRS_CONFIG@")
+
+# The OpenIGTLinkMUSiiC library directories.
+SET(OpenIGTLinkMUSiiC_LIBRARY_DIRS "@OpenIGTLinkMUSiiC_LIBRARY_DIRS_CONFIG@")
+
+# The C and C++ flags added by OpenIGTLinkMUSiiC to the cmake-configured flags.
+SET(OpenIGTLinkMUSiiC_REQUIRED_C_FLAGS "@OpenIGTLinkMUSiiC_REQUIRED_C_FLAGS@")
+SET(OpenIGTLinkMUSiiC_REQUIRED_CXX_FLAGS "@OpenIGTLinkMUSiiC_REQUIRED_CXX_FLAGS@")
+SET(OpenIGTLinkMUSiiC_REQUIRED_LINK_FLAGS "@OpenIGTLinkMUSiiC_REQUIRED_LINK_FLAGS@")
+
+# The OpenIGTLinkMUSiiC Library version number
+SET(OpenIGTLinkMUSiiC_VERSION_MAJOR "@OpenIGTLinkMUSiiC_VERSION_MAJOR@")
+SET(OpenIGTLinkMUSiiC_VERSION_MINOR "@OpenIGTLinkMUSiiC_VERSION_MINOR@")
+SET(OpenIGTLinkMUSiiC_VERSION_PATCH "@OpenIGTLinkMUSiiC_VERSION_PATCH@")
+
+# The OpenIGTLinkMUSiiC Protocol version number
+SET(OpenIGTLinkMUSiiC_PROTOCOL_VERSION "@OpenIGTLinkMUSiiC_PROTOCOL_VERSION@")
+
+# The location of the UseOpenIGTLinkMUSiiC.cmake file.
+SET(OpenIGTLinkMUSiiC_USE_FILE "@OpenIGTLinkMUSiiC_USE_FILE@")
+
+# The build settings file.
+SET(OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE "@OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE@")
+
+# The library dependencies file.
+SET(OpenIGTLinkMUSiiC_LIBRARY_DEPENDS_FILE "@OpenIGTLinkMUSiiC_LIBRARY_DEPENDS_FILE@")
+
+# Whether OpenIGTLinkMUSiiC was built with shared libraries.
+SET(OpenIGTLinkMUSiiC_BUILD_SHARED "@BUILD_SHARED_LIBS@")
+
+# Whether OpenIGTLinkMUSiiC was built with Tcl wrapping support.
+SET(OpenIGTLinkMUSiiC_CSWIG_TCL "@OpenIGTLinkMUSiiC_CSWIG_TCL@")
+SET(OpenIGTLinkMUSiiC_CSWIG_PYTHON "@OpenIGTLinkMUSiiC_CSWIG_PYTHON@")
+SET(OpenIGTLinkMUSiiC_CSWIG_JAVA "@OpenIGTLinkMUSiiC_CSWIG_JAVA@")
+
+# Path to CableSwig configuration used by OpenIGTLinkMUSiiC.
+SET(OpenIGTLinkMUSiiC_CableSwig_DIR "@OpenIGTLinkMUSiiC_CableSwig_DIR_CONFIG@")
+
+# A list of all libraries for OpenIGTLinkMUSiiC.  Those listed here should
+# automatically pull in their dependencies.
+#SET(OpenIGTLinkMUSiiC_LIBRARIES OpenIGTLinkMUSiiCAlgorithms OpenIGTLinkMUSiiCStatistics OpenIGTLinkMUSiiCFEM)
+SET(OpenIGTLinkMUSiiC_LIBRARIES OpenIGTLinkMUSiiC)
+
+# The OpenIGTLinkMUSiiC library dependencies.
+IF(NOT OpenIGTLinkMUSiiC_NO_LIBRARY_DEPENDS AND
+    EXISTS "${OpenIGTLinkMUSiiC_LIBRARY_DEPENDS_FILE}")
+  INCLUDE("${OpenIGTLinkMUSiiC_LIBRARY_DEPENDS_FILE}")
+ENDIF(NOT OpenIGTLinkMUSiiC_NO_LIBRARY_DEPENDS AND
+  EXISTS "${OpenIGTLinkMUSiiC_LIBRARY_DEPENDS_FILE}")

@@ -1,0 +1,43 @@
+/*=========================================================================
+
+  Program:   Open IGT Link Library
+  Module:    $HeadURL: http://svn.na-mic.org/NAMICSandBox/trunk/OpenIGTLink/igtlConfigure.h.in $
+  Language:  C
+  Date:      $Date: 2010-06-09 16:16:36 -0400 (2010-06-09, 수) $
+  Version:   $Revision: 6525 $
+
+  Copyright (c) Insight Software Consortium. All rights reserved.
+
+  This software is distributed WITHOUT ANY WARRANTY; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE.  See the above copyright notices for more information.
+
+=========================================================================*/
+
+#ifndef __IGTLM_CONFIGURE_H
+#define __IGTLM_CONFIGURE_H
+
+#cmakedefine OpenIGTLinkMUSiiC_PLATFORM_MACOSX
+#cmakedefine OpenIGTLinkMUSiiC_PLATFORM_LINUX 
+#cmakedefine OpenIGTLinkMUSiiC_PLATFORM_SUNOS 
+#cmakedefine OpenIGTLinkMUSiiC_PLATFORM_WIN32
+#ifdef OpenIGTLinkMUSiiC_PLATFORM_WIN32
+  #ifndef _WIN32
+    #define _WIN32
+  #endif
+  #ifndef WIN32
+    #define WIN32
+  #endif
+  #define IGTLCommon_EXPORTS
+#endif
+
+#cmakedefine OpenIGTLinkMUSiiC_USE_PTHREADS
+#cmakedefine OpenIGTLinkMUSiiC_USE_WIN32_THREADS
+#cmakedefine OpenIGTLinkMUSiiC_USE_SPROC
+#cmakedefine OpenIGTLinkMUSiiC_HAVE_GETSOCKNAME_WITH_SOCKLEN_T
+#define OpenIGTLinkMUSiiC_PROTOCOL_VERSION @OpenIGTLinkMUSiiC_PROTOCOL_VERSION@
+
+#endif /*__IGTL_CONFIGURE_H*/
+
+
+

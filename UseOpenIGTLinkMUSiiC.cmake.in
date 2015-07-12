@@ -1,0 +1,25 @@
+#
+# This file sets up include directories, link directories, and
+# compiler settings for a project to use OpenIGTLinkMUSiiC.  It should not be
+# included directly, but rather through the OpenIGTLinkMUSiiC_USE_FILE setting
+# obtained from OpenIGTLinkConfig.cmake.
+#
+
+IF(OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE AND NOT SKIP_OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE)
+  INCLUDE(${CMAKE_ROOT}/Modules/CMakeImportBuildSettings.cmake)
+  CMAKE_IMPORT_BUILD_SETTINGS(${OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE})
+ENDIF(OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE AND NOT SKIP_OpenIGTLinkMUSiiC_BUILD_SETTINGS_FILE)
+
+# Add compiler flags needed to use OpenIGTLink.
+#SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenIGTLinkMUSiiC_REQUIRED_C_FLAGS}")
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenIGTLinkMUSiiC_REQUIRED_CXX_FLAGS}")
+#SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenIGTLinkMUSiiC_REQUIRED_LINK_FLAGS}")
+#SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${OpenIGTLinkMUSiiC_REQUIRED_LINK_FLAGS}")
+#SET(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} ${OpenIGTLinkMUSiiC_REQUIRED_LINK_FLAGS}")
+
+# Add include directories needed to use OpenIGTLinkMUSiiC.
+INCLUDE_DIRECTORIES(BEFORE ${OpenIGTLinkMUSiiC_INCLUDE_DIRS})
+
+# Add link directories needed to use OpenIGTLinkMUSiiC.
+LINK_DIRECTORIES(${OpenIGTLinkMUSiiC_LIBRARY_DIRS})
+

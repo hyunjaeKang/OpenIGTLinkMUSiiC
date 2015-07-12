@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Elasticity_Bridge_Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<fq_header>
+		<application_name>MedFrame_II</application_name>
+		<data_type>Elasticity_Bridge_Data</data_type>
+		<data_version>1.0</data_version>
+		<data_changed>true</data_changed>
+		<modified_time>2012-02-06T13:48:51.4802157-05:00</modified_time>
+	</fq_header>
+	
+	<module_settings>
+		<RF_Server>
+			<!-- networking setting-->
+			<update>false</update>
+			<!-- TCP Client-->
+			<num_of_client>0</num_of_client>
+			<!-- TCP Server-->
+			<num_of_server>2</num_of_server>
+			<!-- 1st TCP Server-->
+			<server_tcp_port0>23877</server_tcp_port0>
+			<server_name0>RF_DATA_SERVER</server_name0>
+			<server_io_filter0>MD_RF</server_io_filter0>
+			<!-- 2nd TCP Server-->
+			<server_tcp_port1>23978</server_tcp_port1>
+			<server_name0>BMODE_DATA_SERVER</server_name0>
+			<server_io_filter0>MD_BMODE</server_io_filter0>
+			<!-- control parameters-->
+			<depth>5.0</depth>
+			<focus_count>2</focus_count>
+			<focus_depth>1.5</focus_depth>
+			<focus_space>1.0</focus_space>
+			<sampling_frequency>20000000</sampling_frequency>
+		</RF_Server>
+		<EM_Tracker>
+			<update>false</update>
+			<!-- TCP Client-->
+			<num_of_client>0</num_of_client>
+			<!-- TCP Server-->
+			<num_of_server>1</num_of_server>
+			<!-- 1st TCP Server-->
+			<server_tcp_port0>23877</server_tcp_port0>
+			<server_name0>TRACKING_DATA_SERVER</server_name0>
+			<server_io_filter0>TDATA</server_io_filter0>
+			<!-- control parameters-->
+			<num_of_active_sensor>2</num_of_active_sensor>
+			<sensor1_active>true</sensor1_active> 
+			<sensor1_name>Reference</sensor1_name>
+			<sensor2_active>true</sensor2_active> 
+			<sensor2_name>Needle</sensor2_name>
+			<sensor3_active>false</sensor3_active> 
+			<sensor3_name>None</sensor3_name>
+			<sensor4_active>false</sensor4_active> 
+			<sensor4_name>Noen</sensor4_name>
+		</EM_Tracker>
+		<MUSiiC_Sync_Server>
+			<update>false</update>
+			<!-- TCP Client-->
+			<num_of_client>3</num_of_client>
+			<!-- 1st TCP Client-->
+			<client_tcp_port0>8100</client_tcp_port0>
+			<client_tcp_ip0>127.0.0.1</client_tcp_ip0>
+			<client_tcp_filter0>IMAGE</client_tcp_filter0>
+			<client_tcp_name0>IMAGE</client_tcp_name0>
+			<client_tcp_sync0>true</client_tcp_sync0>
+			<client_tcp_ref0>true</client_tcp_ref0>
+			<client_tcp_reconn0>true</client_tcp_reconn0>
+			<!-- 2nd TCP Client-->
+			<client_tcp_port1>8100</client_tcp_port1>
+			<client_tcp_ip1>127.0.0.1</client_tcp_ip1>
+			<client_tcp_filter1>TDATA</client_tcp_filter1>
+			<client_tcp_name1>Tracking Data</client_tcp_name1>
+			<client_tcp_sync1>true</client_tcp_sync1>
+			<client_tcp_ref1>false</client_tcp_ref1>
+			<client_tcp_reconn1>true</client_tcp_reconn1>
+			<!-- 3rd TCP Client-->
+			<client_tcp_port2>8100</client_tcp_port2>
+			<client_tcp_ip2>127.0.0.1</client_tcp_ip2>
+			<client_tcp_filter2>STRING</client_tcp_filter2>
+			<client_tcp_name2>RADVISION</client_tcp_name2>
+			<client_tcp_sync2>false</client_tcp_sync2>
+			<client_tcp_ref2>false</client_tcp_ref2>
+			<client_tcp_reconn2>true</client_tcp_reconn2>
+			<!-- TCP Server-->
+			<num_of_server>2</num_of_server>
+			<!-- 1st TCP Server-->
+			<server_tcp_port0>23577</server_tcp_port0>
+			<server_name0>RF_DATA_SERVER</server_name0>
+			<server_io_filter0>MD_RF</server_io_filter0>
+			<!-- 2nd TCP Server-->
+			<server_tcp_port1>23578</server_tcp_port1>
+			<server_name0>BMODE_DATA_SERVER</server_name0>
+			<server_io_filter0>MD_BMODE</server_io_filter0>
+			<!-- control parameters-->
+		</MUSiiC_Sync_Server>
+		<B-MODE>
+			<update>false</update><!-- 0:false, 1:true -->
+			<!-- TCP Client-->
+			<num_of_client>1</num_of_client>
+			<!-- 1st TCP Client-->
+			<client_tcp_port0>8100</client_tcp_port0>
+			<client_tcp_ip0>127.0.0.1</client_tcp_ip0>
+			<client_tcp_filter0>MD_RF</client_tcp_filter0>
+			<client_tcp_name0>RF_CLIENT</client_tcp_name0>
+			<client_tcp_sync0>false</client_tcp_sync0>
+			<client_tcp_ref0>false</client_tcp_ref0>
+			<client_tcp_reconn0>true</client_tcp_reconn0>
+			<!-- TCP Server-->
+			<num_of_server>1</num_of_server>
+			<!-- 1st TCP Server-->
+			<server_tcp_port0>23377</server_tcp_port0>
+			<server_name0>BMODE_DATA_SERVER</server_name0>
+			<server_io_filter0>IMAGE</server_io_filter0>
+			<!-- control parameters-->
+			<pixel_width>320</pixel_width>
+			<pixel_height>320</pixel_height>
+			<pixel_depth>1</pixel_depth>
+			<pixel_sp_x>1.0</pixel_sp_x>
+			<pixel_sp_y>1.0</pixel_sp_y>
+			<pixel_sp_z>1.0</pixel_sp_z>
+			<roi_x1>0</roi_x1>
+			<roi_y1>0</roi_y1>
+			<roi_x2>0</roi_x2>
+			<roi_y2>0</roi_y2>
+			<origin_x>0</origin_x>
+			<origin_y>0</origin_y>
+		</B-MODE>
+		<FilteredNCC>
+			<update>false</update><!-- 0:false, 1:true -->
+			<!-- TCP Client-->
+			<num_of_client>1</num_of_client>
+			<!-- 1st TCP Client-->
+			<client_tcp_port0>8100</client_tcp_port0>
+			<client_tcp_ip0>127.0.0.1</client_tcp_ip0>
+			<client_tcp_filter0>MD_RF</client_tcp_filter0>
+			<client_tcp_name0>RF_CLIENT</client_tcp_name0>
+			<client_tcp_sync0>false</client_tcp_sync0>
+			<client_tcp_ref0>false</client_tcp_ref0>
+			<client_tcp_reconn0>true</client_tcp_reconn0>
+			<!-- TCP Server-->
+			<num_of_server>1</num_of_server>
+			<!-- 1st TCP Server-->
+			<server_tcp_port0>23377</server_tcp_port0>
+			<server_name0>EI_DATA_SERVER</server_name0>
+			<server_io_filter0>IMAGE</server_io_filter0>
+			<!-- control parameters-->
+			<update_em_tracker_settings>false</update_em_tracker_settings>
+			<windows>1</windows>
+			<displacement>2.3</displacement>
+			<overlap>4.5</overlap>
+			<lookahead>0</lookahead>
+			<cross_correlation_threshold>0.0</cross_correlation_threshold>
+			<strain_value_positive_noise>0.0</strain_value_positive_noise>
+			<strain_value_negative_noise>0.0</strain_value_negative_noise>
+			<enable_positive_threshold_contrast>1</enable_positive_threshold_contrast> <!-- 0:false, 1:true -->
+			<positive_threshold_contrast>0.0</positive_threshold_contrast>
+			<positive_threshold_standard_deviation>0.0</positive_threshold_standard_deviation>
+			<enable_negative_threshold_contrast>1</enable_negative_threshold_contrast> <!-- 0:false, 1:true -->
+			<negative_threshold_contrast>0.0</negative_threshold_contrast>
+			<negative_threshold_standard_deviation>0.0</negative_threshold_standard_deviation>
+			<median_filter_width>0</median_filter_width>
+			<median_filter_height>0</median_filter_height>
+			<average_filter_depth>0</average_filter_depth>
+		</FilteredNCC>
+	</module_settings>
+</Elasticity_Bridge_Data>
